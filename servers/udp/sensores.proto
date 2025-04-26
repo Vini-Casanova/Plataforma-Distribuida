@@ -1,0 +1,15 @@
+// sensores.proto
+syntax = "proto3";
+
+service SensorService {
+  rpc EnviarDado (DadoSensor) returns (Resposta);
+}
+
+message DadoSensor {
+  string tipo = 1;
+  float valor = 2;
+}
+
+message Resposta {
+  string status = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package atuador;
+
+service AtuadorService {
+  rpc ExecutarComando (Comando) returns (Resposta);
+}
+
+message Comando {
+  string nome = 1;
+}
+
+message Resposta {
+  string status = 1;
+}
